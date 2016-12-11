@@ -33,6 +33,7 @@ public class Adresse implements Serializable{
     /**
      * 
      */
+	//
     private int numero;
 
     /**
