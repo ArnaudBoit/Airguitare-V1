@@ -3,6 +3,8 @@ package fr.afcepf.al29.airguitare.entities;
 import java.io.Serializable;
 import java.util.Set;
 
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,7 +20,9 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="produit")
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="discriminant")
+@DiscriminatorValue(value="Produit")
 public class Produit implements Serializable{
 
     /**

@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
@@ -14,6 +15,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="formation")
+@DiscriminatorValue(value="Formation")
 public class Formation extends Produit implements Serializable{
 
 	/**

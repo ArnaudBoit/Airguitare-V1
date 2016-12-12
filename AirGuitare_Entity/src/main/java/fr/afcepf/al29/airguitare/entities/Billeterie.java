@@ -3,6 +3,7 @@ package fr.afcepf.al29.airguitare.entities;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -11,6 +12,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="billeterie")
+@DiscriminatorValue(value="Billeterie")
 public class Billeterie extends Produit implements Serializable {
 
     /**
